@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integrated Framework for Genomic Data Sharing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Lora:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #1a1a18;
+      color: #c2c0b6;
+      font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    .page-header {
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(222, 220, 209, 0.12);
+    }
+
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #6e6c65;
+      margin-bottom: 0.6rem;
+    }
+
+    .page-title {
+      font-size: 1.55rem;
+      font-weight: 500;
+      color: #f0ede6;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 0.4rem;
+    }
+
+    .page-subtitle {
+      font-size: 0.85rem;
+      color: #6e6c65;
+    }
+
+    /* ── Figure container ── */
+    .figure-wrap {
+      background: #141412;
+      border: 1px solid rgba(222, 220, 209, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem 1.25rem;
+      overflow-x: auto;
+    }
+
+    .figure-wrap svg {
+      display: block;
+      width: 100%;
+      min-width: 540px;
+      height: auto;
+      /* Replace "Anthropic Sans" with Inter, and Anthropic Serif with Lora */
+      font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+    }
+
+    /* Override font-family references baked into inline styles */
+    .figure-wrap svg text {
+      font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif !important;
+    }
+
+    .figure-wrap svg text[style*="Anthropic Serif"],
+    .figure-wrap svg text[style*="Georgia"] {
+      font-family: 'Lora', Georgia, serif !important;
+    }
+
+    .figure-wrap svg text[style*="monospace"] {
+      font-family: 'JetBrains Mono', monospace !important;
+    }
+
+    /* ── Caption ── */
+    .figure-caption {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      color: #5a5854;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.04em;
+      text-align: center;
+    }
+
+    /* ── Footer ── */
+    .page-footer {
+      margin-top: 3rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(222, 220, 209, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: #4a4844;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1.5rem 1rem 3rem; }
+      .page-title { font-size: 1.2rem; }
+      .figure-wrap { padding: 1rem 0.75rem; }
+    }
+
+    @media print {
+      body { background: #fff; color: #111; padding: 0; }
+      .figure-wrap { background: #fff; border: 1px solid #ddd; border-radius: 8px; }
+      .page-footer { color: #888; border-color: #ddd; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="page-header">
+      <p class="eyebrow">PhD Framework Document · Candidate: Debbie</p>
+      <h1 class="page-title">Integrated Framework for Genomic Data Sharing</h1>
+      <p class="page-subtitle">Uganda / LMIC context &nbsp;·&nbsp; GST frames &nbsp;·&nbsp; Principlism assesses &nbsp;·&nbsp; Distributive Justice evaluates</p>
+    </header>
+
+    <div class="figure-wrap">
+      <svg width="100%" viewBox="0 0 680 1620" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+<mask id="imagine-text-gaps-129h76" maskUnits="userSpaceOnUse"><rect x="0" y="0" width="680" height="1620" fill="white"/><rect x="175.77621459960938" y="27.414127349853516" width="328.4476318359375" height="21.18121910095215" fill="black" rx="2"/><rect x="85.66478729248047" y="48.48736572265625" width="508.67047119140625" height="19.02527904510498" fill="black" rx="2"/><rect x="46" y="91.48735809326172" width="213.71217346191406" height="19.02527904510498" fill="black" rx="2"/><rect x="230.00001525878906" y="91.48735809326172" width="166.81854248046875" height="19.02527904510498" fill="black" rx="2"/><rect x="410" y="91.48735809326172" width="171.65480041503906" height="19.02527904510498" fill="black" rx="2"/><rect x="580.0000610351562" y="91.48735809326172" width="50.92266082763672" height="19.02527904510498" fill="black" rx="2"/><rect x="226.56137084960938" y="133.9797821044922" width="226.88124084472656" height="19.02527904510498" fill="black" rx="2"/><rect x="26.000001907348633" y="162.48736572265625" width="31.121490478515625" height="19.02527904510498" fill="black" rx="2"/><rect x="75.56150817871094" y="187.41412353515625" width="72.87700653076172" height="21.1717472076416" fill="black" rx="2"/><rect x="26.115591049194336" y="204.48736572265625" width="171.76882934570312" height="19.02529239654541" fill="black" rx="2"/><rect x="229.58937072753906" y="187.41412353515625" width="88.82124328613281" height="21.1717472076416" fill="black" rx="2"/><rect x="204.1470184326172" y="204.48736572265625" width="139.70596313476562" height="19.02529239654541" fill="black" rx="2"/><rect x="403.91143798828125" y="187.41412353515625" width="64.17710494995117" height="21.1717472076416" fill="black" rx="2"/><rect x="372.5495300292969" y="204.48736572265625" width="126.90093994140625" height="19.02529239654541" fill="black" rx="2"/><rect x="541.2450561523438" y="187.41412353515625" width="93.50994110107422" height="21.1717472076416" fill="black" rx="2"/><rect x="521.6015014648438" y="204.48736572265625" width="132.7970199584961" height="19.02529239654541" fill="black" rx="2"/><rect x="122.32915496826172" y="236.48736572265625" width="435.34173583984375" height="19.02527904510498" fill="black" rx="2"/><rect x="26.000001907348633" y="279.4873962402344" width="70.10001754760742" height="19.02527904510498" fill="black" rx="2"/><rect x="109.00000762939453" y="279.4873962402344" width="66.88031387329102" height="19.02527904510498" fill="black" rx="2"/><rect x="109.00000762939453" y="295.48736572265625" width="349.67755126953125" height="19.02527904510498" fill="black" rx="2"/><rect x="416.0000305175781" y="279.4873962402344" width="105.24846649169922" height="19.02527904510498" fill="black" rx="2"/><rect x="416.0000305175781" y="295.48736572265625" width="306.1512145996094" height="19.02527904510498" fill="black" rx="2"/><rect x="26.000001907348633" y="345.4873962402344" width="77.1699447631836" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="345.4873962402344" width="518.2893371582031" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="361.48736572265625" width="503.74700927734375" height="19.02527904510498" fill="black" rx="2"/><rect x="191.24191284179688" y="405.97979736328125" width="297.5179748535156" height="19.02527904510498" fill="black" rx="2"/><rect x="26.000001907348633" y="436.4873352050781" width="31.121490478515625" height="19.02527904510498" fill="black" rx="2"/><rect x="94.82645416259766" y="455.4141540527344" width="72.34709930419922" height="21.1717472076416" fill="black" rx="2"/><rect x="43.428592681884766" y="472.4873962402344" width="175.142822265625" height="19.02527904510498" fill="black" rx="2"/><rect x="258.4169921875" y="455.4141540527344" width="145.16604614257812" height="21.1717472076416" fill="black" rx="2"/><rect x="223.0606231689453" y="472.4873962402344" width="215.87876892089844" height="19.02527904510498" fill="black" rx="2"/><rect x="508.80523681640625" y="455.4141540527344" width="68.3895492553711" height="21.1717472076416" fill="black" rx="2"/><rect x="415.5680236816406" y="472.4873962402344" width="254.86399841308594" height="19.02527904510498" fill="black" rx="2"/><rect x="26.000001907348633" y="531.4873657226562" width="70.10001754760742" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="531.4873657226562" width="490.84808349609375" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="547.4873657226562" width="481.6451110839844" height="19.02527904510498" fill="black" rx="2"/><rect x="26.000001907348633" y="597.4873657226562" width="77.1699447631836" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="597.4873657226562" width="512.6817016601562" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="613.4873657226562" width="410.1140441894531" height="19.02527904510498" fill="black" rx="2"/><rect x="207.00503540039062" y="657.9797973632812" width="265.9912414550781" height="19.02527904510498" fill="black" rx="2"/><rect x="26.000001907348633" y="688.4873657226562" width="31.121490478515625" height="19.02527904510498" fill="black" rx="2"/><rect x="59.627723693847656" y="707.4141845703125" width="142.7445526123047" height="21.1717472076416" fill="black" rx="2"/><rect x="44.1127815246582" y="724.4873657226562" width="173.77444458007812" height="19.02527904510498" fill="black" rx="2"/><rect x="290.01702880859375" y="707.4141845703125" width="81.9659652709961" height="21.1717472076416" fill="black" rx="2"/><rect x="226.79347229003906" y="724.4873657226562" width="208.41307067871094" height="19.02527904510498" fill="black" rx="2"/><rect x="475.6456604003906" y="707.4141845703125" width="134.7087173461914" height="21.1717472076416" fill="black" rx="2"/><rect x="433.7325134277344" y="724.4873657226562" width="218.53501892089844" height="19.02527904510498" fill="black" rx="2"/><rect x="26.000001907348633" y="783.4874267578125" width="70.10001754760742" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="783.4874267578125" width="443.6526184082031" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="799.4873657226562" width="455.9210205078125" height="19.02527904510498" fill="black" rx="2"/><rect x="26.000001907348633" y="849.4873657226562" width="77.1699447631836" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="849.4873657226562" width="440.1042175292969" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="865.4873657226562" width="456.6990966796875" height="19.02527904510498" fill="black" rx="2"/><rect x="204.3018341064453" y="909.9798583984375" width="271.39666748046875" height="19.02527904510498" fill="black" rx="2"/><rect x="26.000001907348633" y="940.4873657226562" width="31.121490478515625" height="19.02527904510498" fill="black" rx="2"/><rect x="67.71051788330078" y="959.4141235351562" width="126.57896423339844" height="21.1717472076416" fill="black" rx="2"/><rect x="31.626373291015625" y="976.4873657226562" width="198.7472686767578" height="19.02527904510498" fill="black" rx="2"/><rect x="274.8341064453125" y="959.4141235351562" width="112.33177947998047" height="21.1717472076416" fill="black" rx="2"/><rect x="218.55303955078125" y="976.4873657226562" width="224.89393615722656" height="19.02527904510498" fill="black" rx="2"/><rect x="476.4908447265625" y="959.4141235351562" width="133.01837158203125" height="21.1717472076416" fill="black" rx="2"/><rect x="448.4995422363281" y="976.4873657226562" width="189.00094604492188" height="19.02527904510498" fill="black" rx="2"/><rect x="26.000001907348633" y="1035.4873046875" width="70.10001754760742" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="1035.4873046875" width="459.04010009765625" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="1051.4873046875" width="429.7206726074219" height="19.02527904510498" fill="black" rx="2"/><rect x="26.000001907348633" y="1101.4874267578125" width="77.1699447631836" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="1101.4874267578125" width="530.2424926757812" height="19.02527904510498" fill="black" rx="2"/><rect x="114.00000762939453" y="1117.4874267578125" width="437.6961669921875" height="19.02527904510498" fill="black" rx="2"/><rect x="664" y="747.6969604492188" width="305.9768371582031" height="16.87881088256836" fill="black" rx="2"/><rect x="238.81971740722656" y="1163.9798583984375" width="202.3617706298828" height="19.02527904510498" fill="black" rx="2"/><rect x="33.628177642822266" y="1203.4141845703125" width="168.74365234375" height="21.1717472076416" fill="black" rx="2"/><rect x="43.32082748413086" y="1222.4874267578125" width="149.35836791992188" height="19.02527904510498" fill="black" rx="2"/><rect x="70.35626983642578" y="1238.4874267578125" width="95.28748321533203" height="19.02527904510498" fill="black" rx="2"/><rect x="270.4723815917969" y="1203.4141845703125" width="139.05531311035156" height="21.181180953979492" fill="black" rx="2"/><rect x="262.38287353515625" y="1222.4874267578125" width="155.23431396484375" height="19.02527904510498" fill="black" rx="2"/><rect x="268.2588195800781" y="1238.4874267578125" width="143.48240661621094" height="19.02527904510498" fill="black" rx="2"/><rect x="468.0059509277344" y="1203.4141845703125" width="187.9880828857422" height="21.181180953979492" fill="black" rx="2"/><rect x="489.6986999511719" y="1222.4874267578125" width="144.60260009765625" height="19.02527904510498" fill="black" rx="2"/><rect x="485.3118591308594" y="1238.4874267578125" width="153.37628173828125" height="19.02527904510498" fill="black" rx="2"/><rect x="170.9365997314453" y="1311.4141845703125" width="338.43853759765625" height="21.1717472076416" fill="black" rx="2"/><rect x="111.91207122802734" y="1334.4874267578125" width="456.1759033203125" height="19.02527904510498" fill="black" rx="2"/><rect x="37.53694152832031" y="1388.4874267578125" width="604.9261474609375" height="19.02527904510498" fill="black" rx="2"/><rect x="47.0820198059082" y="1404.4874267578125" width="585.8359985351562" height="19.02527904510498" fill="black" rx="2"/><rect x="176.5408935546875" y="1420.4874267578125" width="326.91827392578125" height="19.02527904510498" fill="black" rx="2"/></mask></defs>
+
+<!-- ══ TITLE BLOCK ══ -->
+<rect x="20" y="16" width="640" height="54" rx="8" fill="none" stroke="rgba(222, 220, 209, 0.3)" stroke-width="0.5"/>
+<text x="340" y="38" text-anchor="middle" dominant-baseline="central" font-size="15" style="fill:rgb(250, 249, 245);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Integrated Framework for Genomic Data Sharing</text>
+<text x="340" y="58" text-anchor="middle" dominant-baseline="central" style="fill:rgb(194, 192, 182);font-size:12px;text-anchor:middle;dominant-baseline:central">Uganda / LMIC context · GST frames · Principlism assesses · Distributive Justice evaluates</text>
+
+<!-- ══ LEGEND ══ -->
+<rect x="20" y="84" width="640" height="36" rx="6" fill="rgb(38, 38, 36)" stroke="rgba(222, 220, 209, 0.15)" stroke-width="0.5"/>
+<rect x="36" y="96" width="10" height="10" rx="2" fill="rgb(8, 80, 65)" stroke-width="0"/>
+<text x="50" y="101" dominant-baseline="central" style="fill:rgb(194, 192, 182);font-size:12px;dominant-baseline:central">GST — systemic level &amp; relationships</text>
+<rect x="220" y="96" width="10" height="10" rx="2" fill="rgb(60, 52, 137)" stroke-width="0"/>
+<text x="234" y="101" dominant-baseline="central" style="fill:rgb(194, 192, 182);font-size:12px;dominant-baseline:central">Principlism — ethical quality</text>
+<rect x="400" y="96" width="10" height="10" rx="2" fill="rgb(113, 43, 19)" stroke-width="0"/>
+<text x="414" y="101" dominant-baseline="central" style="fill:rgb(194, 192, 182);font-size:12px;dominant-baseline:central">Distributive Justice — equity</text>
+<line x1="560" y1="101" x2="580" y2="101" stroke="rgb(194, 192, 182)" stroke-width="1" stroke-dasharray="3 2" marker-end="url(#arrow)" mask="url(#imagine-text-gaps-129h76)"/>
+<text x="584" y="101" dominant-baseline="central" style="fill:rgb(194, 192, 182);font-size:12px;dominant-baseline:central">informs</text>
+
+<!-- ══════════════════════════════════════════════════════════
+     STAGE 1 — DATA GENERATION
+══════════════════════════════════════════════════════════ -->
+<text x="340" y="148" text-anchor="middle" style="fill:rgb(194, 192, 182);font-size:12px;text-anchor:middle">── STAGE 1 · DATA GENERATION ──</text>
+
+<!-- GST band -->
+<g>
+  <rect x="20" y="158" width="640" height="104" rx="8" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="30" y="172" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;dominant-baseline:central">GST</text>
+</g>
+<g>
+  <rect x="38" y="180" width="148" height="44" rx="6" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="112" y="198" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Individual</text>
+  <text x="112" y="214" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">Participant (genetics, values)</text>
+</g>
+<g>
+  <rect x="200" y="180" width="148" height="44" rx="6" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="274" y="198" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Institutional</text>
+  <text x="274" y="214" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">Biobank / Research site</text>
+</g>
+<g>
+  <rect x="362" y="180" width="148" height="44" rx="6" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="436" y="198" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">National</text>
+  <text x="436" y="214" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">Ugandan policy &amp; law</text>
+</g>
+<g>
+  <rect x="524" y="180" width="128" height="44" rx="6" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="588" y="198" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">International</text>
+  <text x="588" y="214" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">H3Africa, EGA, dbGaP</text>
+</g>
+<!-- Stakeholder row inside GST -->
+<text x="340" y="246" text-anchor="middle" dominant-baseline="central" style="fill:rgb(194, 192, 182);font-size:12px;text-anchor:middle;dominant-baseline:central">Stakeholders: Participant · Researcher · REC · Funder · Lawyer · CAB member</text>
+
+<!-- Principlism overlay for Stage 1 -->
+<g>
+  <rect x="20" y="274" width="640" height="54" rx="8" stroke-width="0.5" style="fill:rgb(60, 52, 137);stroke:rgb(175, 169, 236)"/>
+  <text x="30" y="289" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">Principlism</text>
+  <text x="113" y="289" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">Autonomy</text>
+  <text x="113" y="305" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">→ voluntary, free informed consent prior to sample collection</text>
+  <text x="420" y="289" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">Non-maleficence</text>
+  <text x="420" y="305" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">→ minimise re-identifiability risk at point of collection</text>
+</g>
+
+<!-- DJ overlay for Stage 1 -->
+<g>
+  <rect x="20" y="340" width="640" height="44" rx="8" stroke-width="0.5" style="fill:rgb(113, 43, 19);stroke:rgb(240, 153, 123)"/>
+  <text x="30" y="355" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;dominant-baseline:central">Dist. Justice</text>
+  <text x="118" y="355" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;dominant-baseline:central">Equity check: who bears the burden of participation? Are participants fairly compensated?</text>
+  <text x="118" y="371" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;dominant-baseline:central">Power lens: researcher–participant asymmetry · community vs. individual consent norms</text>
+</g>
+
+<!-- Stage connector -->
+<line x1="340" y1="384" x2="340" y2="406" stroke="rgb(194, 192, 182)" stroke-width="1" marker-end="url(#arrow)" mask="url(#imagine-text-gaps-129h76)"/>
+
+<!-- ══════════════════════════════════════════════════════════
+     STAGE 2 — DATA PROCESSING & STORAGE
+══════════════════════════════════════════════════════════ -->
+<text x="340" y="420" text-anchor="middle" style="fill:rgb(194, 192, 182);font-size:12px;text-anchor:middle">── STAGE 2 · DATA PROCESSING &amp; STORAGE ──</text>
+
+<g>
+  <rect x="20" y="430" width="640" height="84" rx="8" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="30" y="446" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;dominant-baseline:central">GST</text>
+</g>
+<g>
+  <rect x="38" y="448" width="186" height="50" rx="6" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="131" y="466" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Platforms</text>
+  <text x="131" y="482" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">EGA · dbGaP · H3Africa nodes</text>
+</g>
+<g>
+  <rect x="238" y="448" width="186" height="50" rx="6" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="331" y="466" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Policies &amp; Guidelines</text>
+  <text x="331" y="482" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">Data access tiers · GA4GH standards</text>
+</g>
+<g>
+  <rect x="438" y="448" width="210" height="50" rx="6" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="543" y="466" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Capacity</text>
+  <text x="543" y="482" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">Bioinformatics · REC literacy · Infrastructure</text>
+</g>
+
+<g>
+  <rect x="20" y="526" width="640" height="54" rx="8" stroke-width="0.5" style="fill:rgb(60, 52, 137);stroke:rgb(175, 169, 236)"/>
+  <text x="30" y="541" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">Principlism</text>
+  <text x="118" y="541" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">Beneficence → data stored under conditions that maximise future therapeutic benefit</text>
+  <text x="118" y="557" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">Autonomy → scope of consent respected; re-use governed by original consent terms</text>
+</g>
+
+<g>
+  <rect x="20" y="592" width="640" height="44" rx="8" stroke-width="0.5" style="fill:rgb(113, 43, 19);stroke:rgb(240, 153, 123)"/>
+  <text x="30" y="607" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;dominant-baseline:central">Dist. Justice</text>
+  <text x="118" y="607" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;dominant-baseline:central">Data sovereignty: who controls the repository? On-shore vs. off-shore storage asymmetry</text>
+  <text x="118" y="623" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;dominant-baseline:central">LMIC vs. HIC infrastructure gap → capacity building as justice obligation</text>
+</g>
+
+<line x1="340" y1="636" x2="340" y2="658" stroke="rgb(194, 192, 182)" stroke-width="1" marker-end="url(#arrow)" mask="url(#imagine-text-gaps-129h76)"/>
+
+<!-- ══════════════════════════════════════════════════════════
+     STAGE 3 — DATA ACCESS & SHARING
+══════════════════════════════════════════════════════════ -->
+<text x="340" y="672" text-anchor="middle" style="fill:rgb(194, 192, 182);font-size:12px;text-anchor:middle">── STAGE 3 · DATA ACCESS &amp; SHARING ──</text>
+
+<g>
+  <rect x="20" y="682" width="640" height="84" rx="8" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="30" y="698" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;dominant-baseline:central">GST</text>
+</g>
+<g>
+  <rect x="38" y="700" width="186" height="50" rx="6" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="131" y="718" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Access mechanisms</text>
+  <text x="131" y="734" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">Controlled · Open · Federated</text>
+</g>
+<g>
+  <rect x="238" y="700" width="186" height="50" rx="6" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="331" y="718" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Awareness</text>
+  <text x="331" y="734" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">Researcher knowledge of platforms</text>
+</g>
+<g>
+  <rect x="438" y="700" width="210" height="50" rx="6" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="543" y="718" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Governance actors</text>
+  <text x="543" y="734" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">Regulators · National REC · Publishers</text>
+</g>
+
+<g>
+  <rect x="20" y="778" width="640" height="54" rx="8" stroke-width="0.5" style="fill:rgb(60, 52, 137);stroke:rgb(175, 169, 236)"/>
+  <text x="30" y="793" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">Principlism</text>
+  <text x="118" y="793" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">Justice → equitable access for African researchers to data generated in Africa</text>
+  <text x="118" y="809" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">Non-maleficence → stigmatisation risk · discrimination · data misuse protections</text>
+</g>
+
+<g>
+  <rect x="20" y="844" width="640" height="44" rx="8" stroke-width="0.5" style="fill:rgb(113, 43, 19);stroke:rgb(240, 153, 123)"/>
+  <text x="30" y="859" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;dominant-baseline:central">Dist. Justice</text>
+  <text x="118" y="859" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;dominant-baseline:central">Ethical imperialism check: do HIC institutions gatekeep access to LMIC data?</text>
+  <text x="118" y="875" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;dominant-baseline:central">Intellectual property · commercial exploitation risk · benefit-sharing agreements</text>
+</g>
+
+<line x1="340" y1="888" x2="340" y2="910" stroke="rgb(194, 192, 182)" stroke-width="1" marker-end="url(#arrow)" mask="url(#imagine-text-gaps-129h76)"/>
+
+<!-- ══════════════════════════════════════════════════════════
+     STAGE 4 — DATA USE & TRANSLATION
+══════════════════════════════════════════════════════════ -->
+<text x="340" y="924" text-anchor="middle" style="fill:rgb(194, 192, 182);font-size:12px;text-anchor:middle">── STAGE 4 · DATA USE &amp; TRANSLATION ──</text>
+
+<g>
+  <rect x="20" y="934" width="640" height="84" rx="8" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="30" y="950" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;dominant-baseline:central">GST</text>
+</g>
+<g>
+  <rect x="38" y="952" width="186" height="50" rx="6" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="131" y="970" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Research outputs</text>
+  <text x="131" y="986" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">Publications · Clinical tools · Drugs</text>
+</g>
+<g>
+  <rect x="238" y="952" width="186" height="50" rx="6" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="331" y="970" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Feedback loops</text>
+  <text x="331" y="986" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">Results return · Community re-contact</text>
+</g>
+<g>
+  <rect x="438" y="952" width="210" height="50" rx="6" stroke-width="0.5" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="543" y="970" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Commercialisation</text>
+  <text x="543" y="986" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">IP · Licensing · Profit distribution</text>
+</g>
+
+<g>
+  <rect x="20" y="1030" width="640" height="54" rx="8" stroke-width="0.5" style="fill:rgb(60, 52, 137);stroke:rgb(175, 169, 236)"/>
+  <text x="30" y="1045" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">Principlism</text>
+  <text x="118" y="1045" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">Beneficence → do findings benefit source populations? Results return obligation</text>
+  <text x="118" y="1061" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;dominant-baseline:central">Justice → authorship equity; African co-investigators named and resourced</text>
+</g>
+
+<g>
+  <rect x="20" y="1096" width="640" height="44" rx="8" stroke-width="0.5" style="fill:rgb(113, 43, 19);stroke:rgb(240, 153, 123)"/>
+  <text x="30" y="1111" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;dominant-baseline:central">Dist. Justice</text>
+  <text x="118" y="1111" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;dominant-baseline:central">Benefit sharing: does Uganda derive health, economic, or knowledge gains from its own data?</text>
+  <text x="118" y="1127" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;dominant-baseline:central">National sovereignty: legal mechanisms to claim benefit from international IP</text>
+</g>
+
+<!-- ══ FEEDBACK ARROW (right margin) ══ -->
+<line x1="660" y1="1127" x2="660" y2="374" stroke="#9a9890" stroke-width="0.7" stroke-dasharray="4 3" marker-end="url(#arrow)" mask="url(#imagine-text-gaps-129h76)"/>
+<text x="668" y="760" text-anchor="start" font-size="11" fill="rgb(194, 192, 182)" transform="rotate(90,668,760)" style="font-family:'JetBrains Mono',monospace">inequitable output → upstream reconfiguration</text>
+
+<!-- Stage connector to outcome -->
+<line x1="340" y1="1140" x2="340" y2="1162" stroke="rgb(194, 192, 182)" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- ══════════════════════════════════════════════════════════
+     INTEGRATED OUTCOME
+══════════════════════════════════════════════════════════ -->
+<text x="340" y="1178" text-anchor="middle" style="fill:rgb(194, 192, 182);font-size:12px;text-anchor:middle">── INTEGRATED OUTCOME ──</text>
+
+<!-- Three outcome pillars side by side -->
+<g>
+  <rect x="20" y="1188" width="196" height="80" rx="8" stroke-width="0.8" style="fill:rgb(8, 80, 65);stroke:rgb(93, 202, 165)"/>
+  <text x="118" y="1214" text-anchor="middle" dominant-baseline="central" style="fill:rgb(159, 225, 203);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Systemic empowerment</text>
+  <text x="118" y="1232" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">Functional infrastructure</text>
+  <text x="118" y="1248" text-anchor="middle" dominant-baseline="central" style="fill:rgb(93, 202, 165);font-size:12px;text-anchor:middle;dominant-baseline:central">at all four levels</text>
+</g>
+<g>
+  <rect x="232" y="1188" width="216" height="80" rx="8" stroke-width="0.8" style="fill:rgb(60, 52, 137);stroke:rgb(175, 169, 236)"/>
+  <text x="340" y="1214" text-anchor="middle" dominant-baseline="central" style="fill:rgb(206, 203, 246);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Ethical data sharing</text>
+  <text x="340" y="1232" text-anchor="middle" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;text-anchor:middle;dominant-baseline:central">Consent respected · Risks</text>
+  <text x="340" y="1248" text-anchor="middle" dominant-baseline="central" style="fill:rgb(175, 169, 236);font-size:12px;text-anchor:middle;dominant-baseline:central">mitigated at every stage</text>
+</g>
+<g>
+  <rect x="464" y="1188" width="196" height="80" rx="8" stroke-width="0.8" style="fill:rgb(113, 43, 19);stroke:rgb(240, 153, 123)"/>
+  <text x="562" y="1214" text-anchor="middle" dominant-baseline="central" style="fill:rgb(245, 196, 179);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central">Benefit-sharing framework</text>
+  <text x="562" y="1232" text-anchor="middle" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;text-anchor:middle;dominant-baseline:central">Equity · Justice · Uganda</text>
+  <text x="562" y="1248" text-anchor="middle" dominant-baseline="central" style="fill:rgb(240, 153, 123);font-size:12px;text-anchor:middle;dominant-baseline:central">retains sovereignty &amp; gain</text>
+</g>
+
+<line x1="216" y1="1228" x2="230" y2="1228" stroke="rgb(194, 192, 182)" stroke-width="0.7"/>
+<line x1="448" y1="1228" x2="462" y2="1228" stroke="rgb(194, 192, 182)" stroke-width="0.7"/>
+
+<!-- ══ AXIOM ══ -->
+<rect x="20" y="1298" width="640" height="60" rx="8" fill="rgb(38, 38, 36)" stroke="rgba(222, 220, 209, 0.3)" stroke-width="0.5"/>
+<text x="340" y="1322" text-anchor="middle" dominant-baseline="central" font-size="14" font-style="italic" style="fill:rgb(250, 249, 245);font-family:'Lora',Georgia,serif;font-style:italic;font-size:14px;text-anchor:middle;dominant-baseline:central">"If outcomes are inequitable, the error is upstream."</text>
+<text x="340" y="1344" text-anchor="middle" dominant-baseline="central" style="fill:rgb(194, 192, 182);font-size:12px;text-anchor:middle;dominant-baseline:central">Ethics is a function of state space. Systemic capacity dictates ethical possibility.</text>
+
+<!-- ══ READING KEY (bottom) ══ -->
+<rect x="20" y="1380" width="640" height="54" rx="6" fill="none" stroke="rgba(222, 220, 209, 0.15)" stroke-width="0.5"/>
+<text x="340" y="1398" text-anchor="middle" dominant-baseline="central" style="fill:rgb(194, 192, 182);font-size:12px;text-anchor:middle;dominant-baseline:central">How to read: each stage has three horizontal bands — GST (who the actors are and what structures apply),</text>
+<text x="340" y="1414" text-anchor="middle" dominant-baseline="central" style="fill:rgb(194, 192, 182);font-size:12px;text-anchor:middle;dominant-baseline:central">Principlism (which ethical principles are at stake and how), Distributive Justice (what equity demands).</text>
+<text x="340" y="1430" text-anchor="middle" dominant-baseline="central" style="fill:rgb(194, 192, 182);font-size:12px;text-anchor:middle;dominant-baseline:central">All three lenses operate simultaneously, not sequentially.</text>
+      </svg>
+    </div>
+
+    <p class="figure-caption">Figure 1 · Integrated Genomic Data Sharing Framework · Revised Architecture</p>
+
+    <footer class="page-footer">
+      <span>Candidate: Debbie</span>
+      <span>GST → Principlism → Distributive Justice</span>
+      <span>Uganda · LMIC · Sub-Saharan Africa</span>
+    </footer>
+
+  </div>
+</body>
+</html>
